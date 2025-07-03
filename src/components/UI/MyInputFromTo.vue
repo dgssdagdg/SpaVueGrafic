@@ -55,6 +55,7 @@ export default {
 }
 .filter-from-to-input {
   width: 100%;
+  min-width: 30px;
   height: 30px;
   border: 1px solid #000;
   padding: 0 10px;
@@ -64,5 +65,18 @@ input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+@media(max-width: 1700px) {
+.filter-from-to {
+  grid-column-start: span 6;
+}
+}
+@media(max-width: 998px) {
+.filter-from-to {
+  grid-column-start: span 12;
+}
+.filter-from-to-inputs {
+  flex-wrap: wrap;
+}
 }
 </style>

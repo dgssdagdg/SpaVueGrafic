@@ -30,4 +30,12 @@ body {
   flex-direction: column;
   justify-content: flex-end;
 }
+@media(max-width: 998px) {
+.wrapper {
+  flex-direction: column;
+}
+.main {
+  width: 100%;
+}
+}
 </style>

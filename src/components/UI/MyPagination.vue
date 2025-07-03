@@ -37,7 +37,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .pagination-btn {
     border: 1px solid #000;
@@ -51,7 +52,9 @@ export default {
 .pagination-numbers {
     display: flex;
     align-items: center;
-    column-gap: 10px;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 .pagination-number {
     padding: 10px;

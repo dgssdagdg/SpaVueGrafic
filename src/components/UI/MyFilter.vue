@@ -54,6 +54,5 @@ export default {
     color: gray;
     border-color: gray;
   }
-
 }
 </style>
