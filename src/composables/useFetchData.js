@@ -5,15 +5,16 @@ export default async function useFetchData(endpoint, dateFrom, dateTo, page, lim
   try {
     const url = new URL(`${API_HOST}${endpoint}`);
     url.searchParams.append('dateFrom', dateFrom);
-    if(dateTo){ url.searchParams.append('dateTo', dateTo);}
+    if(dateTo){ url.searchParams.append('dateTo', dateTo)}
     url.searchParams.append('page', page);
     url.searchParams.append('limit', limit);
     url.searchParams.append('key', API_KEY);
 
+    console.log(url.toString());
     const response = await fetch(url.toString());
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     
-    return await response.json(); // Возвращаем данные, а не Promise
+    return await response.json();
   } catch (error) {
     console.error('Error:', error);
     throw error;

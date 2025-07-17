@@ -43,7 +43,7 @@ const filtratedDataArray = ref([]) // Переменная для хранени
 //Задаем данные переменной
 onMounted(async () => {
   try {
-    dataArray.value = await useFetchData('/api/stocks', '2025-07-03', false, page.value);
+    dataArray.value = await useFetchData('/api/stocks', '2025-07-17', false, page.value);
     filtratedDataArray.value = useFilterDataArray(filters, dataArray)
     console.log(dataArray.value);
     
@@ -54,7 +54,7 @@ onMounted(async () => {
 
 // Колбэк для загрузки данных
 const fetchIncomes = async (page) => {
-  dataArray.value = await useFetchData('/api/stocks', '2025-07-03', false, page);
+  dataArray.value = await useFetchData('/api/stocks', '2025-07-17', false, page);
   filtratedDataArray.value = useFilterDataArray(filters, dataArray)
 };
 
