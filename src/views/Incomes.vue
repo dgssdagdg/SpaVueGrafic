@@ -43,7 +43,7 @@ const filtratedDataArray = ref([]) // Переменная для хранени
 //Задаем данные переменной
 onMounted(async () => {
   try {
-    dataArray.value = await useFetchData('/api/incomes', '2021-01-01', '2025-03-31', page.value);
+    dataArray.value = await useFetchData('/incomes', '2021-01-01', '2025-03-31', page.value);
     filtratedDataArray.value = useFilterDataArray(filters, dataArray)
   } catch (e) {
     console.error(e);
@@ -52,7 +52,7 @@ onMounted(async () => {
 
 // Колбэк для загрузки данных
 const fetchIncomes = async (page) => {
-  dataArray.value = await useFetchData('/api/incomes', '2021-01-01', '2025-03-31', page);
+  dataArray.value = await useFetchData('/incomes', '2021-01-01', '2025-03-31', page);
   filtratedDataArray.value = useFilterDataArray(filters, dataArray)
 };
 
