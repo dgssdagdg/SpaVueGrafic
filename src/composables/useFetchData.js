@@ -1,4 +1,4 @@
-const API_HOST = '/api'; // Используем относительный путь
+const API_HOST = '/api-proxy';
 const API_KEY = 'E6kUTYrYwZq2tN4QEtyzsbEBk3ie';
 
 export default async function useFetchData(endpoint, dateFrom, dateTo, page, limit = 25) {
